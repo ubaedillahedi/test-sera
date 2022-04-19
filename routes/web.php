@@ -23,4 +23,15 @@ $router->group([
 ], function ($router) {
     $router->post('login', 'AuthController@login');
     $router->post('logout', 'AuthController@logout');
+    $router->post('save', 'FirebaseController@store');
+});
+
+$router->group([
+    'prefix' => 'api/firebase'
+], function ($router) {
+    $router->get('/', 'FirebaseController@index');
+    $router->get('/{id}', 'FirebaseController@detail');
+    $router->post('/save', 'FirebaseController@store');
+    $router->post('/update/{id}', 'FirebaseController@update');
+    $router->post('/delete/{id}', 'FirebaseController@delete');
 });

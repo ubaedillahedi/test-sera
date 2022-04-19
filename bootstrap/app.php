@@ -23,6 +23,8 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
+$app->register(Kreait\Laravel\Firebase\ServiceProvider::class);
+
 $app->withFacades();
 
 $app->withEloquent();
