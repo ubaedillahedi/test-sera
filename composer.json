@@ -1,11 +1,16 @@
 {
     "name": "laravel/lumen",
     "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "keywords": [
+        "framework",
+        "laravel",
+        "lumen"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
         "php": "^7.3|^8.0",
+        "kreait/laravel-firebase": "^4.1",
         "laravel/lumen-framework": "^8.3.1",
         "tymon/jwt-auth": "^1.0"
     },
@@ -29,7 +34,10 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4.21"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
