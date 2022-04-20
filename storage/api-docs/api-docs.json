@@ -1,0 +1,233 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Dokumentasi API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "description": "Home page",
+                "responses": {
+                    "default": {
+                        "description": "Versioning Lumen"
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "description": "API Login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "body",
+                        "description": "The email of the user",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "body",
+                        "description": "The password of the user",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "access_token: <b>string</b><br>token_type: <b>string</b><br>user: <b>object</b><br>expires_in: <b>integer</b>"
+                    }
+                }
+            }
+        },
+        "/api/logout": {
+            "post": {
+                "description": "API Logout",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "header",
+                        "description": "Bearer Token",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "message: <b>string</b>"
+                    }
+                }
+            }
+        },
+        "/api/firebase": {
+            "get": {
+                "description": "API List Firebase",
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/firebase/{id}": {
+            "get": {
+                "description": "API Detail Firebase",
+                "parameters": [
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "_id from firebase",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/firebase/save": {
+            "post": {
+                "description": "API Insert Firebase",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "body",
+                        "description": "Field name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone",
+                        "in": "body",
+                        "description": "Field phone",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/firebase/update/{id}": {
+            "post": {
+                "description": "API Update Firebase",
+                "parameters": [
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Id from firebase",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "body",
+                        "description": "Field name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone",
+                        "in": "body",
+                        "description": "Field phone",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/firebase/delete/{id}": {
+            "post": {
+                "description": "API Delete Firebase",
+                "parameters": [
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Id from firebase",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/integration/login": {
+            "post": {
+                "description": "API Integration Login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "body",
+                        "description": "Field email",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "body",
+                        "description": "Field password",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/integration/register": {
+            "post": {
+                "description": "API Integration Register",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "body",
+                        "description": "Field email",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "body",
+                        "description": "Field password",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/filter-object": {
+            "get": {
+                "description": "API Filter Object",
+                "responses": {
+                    "200": {
+                        "description": "list: <b>Array</b>"
+                    }
+                }
+            }
+        }
+    }
+}
