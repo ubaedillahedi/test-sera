@@ -18,6 +18,6 @@ class FilterObjectController extends Controller
             if ((int) $number >= 100000) $response[] = (int) $number;
         }
         var_dump($response);
-        return true;
+        return;
     }
 }
