@@ -35,3 +35,10 @@ $router->group([
     $router->post('/update/{id}', 'FirebaseController@update');
     $router->post('/delete/{id}', 'FirebaseController@delete');
 });
+
+$router->group([
+    'prefix' => 'api/integration'
+], function ($router) {
+    $router->post('/login', 'IntegrationController@login');
+    $router->post('/register', 'IntegrationController@register');
+});
