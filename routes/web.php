@@ -42,3 +42,9 @@ $router->group([
     $router->post('/login', 'IntegrationController@login');
     $router->post('/register', 'IntegrationController@register');
 });
+
+$router->group([
+    'prefix' => 'api/filter-object'
+], function ($router) {
+    $router->get('/', 'FilterObjectController@index');
+});
