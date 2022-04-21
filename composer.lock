@@ -855,16 +855,16 @@
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.44.1",
+            "version": "v1.44.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-core.git",
-                "reference": "897df2db2f0b04c370c44f8564ae3fd69034e273"
+                "reference": "d495545a53479297b440bee499daad50137fd55e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/897df2db2f0b04c370c44f8564ae3fd69034e273",
-                "reference": "897df2db2f0b04c370c44f8564ae3fd69034e273",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/d495545a53479297b440bee499daad50137fd55e",
+                "reference": "d495545a53479297b440bee499daad50137fd55e",
                 "shasum": ""
             },
             "require": {
@@ -913,22 +913,22 @@
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.44.1"
+                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.44.2"
             },
-            "time": "2022-03-30T03:18:53+00:00"
+            "time": "2022-04-20T18:34:50+00:00"
         },
         {
             "name": "google/cloud-storage",
-            "version": "v1.26.1",
+            "version": "v1.26.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-storage.git",
-                "reference": "1382afef595c2ced1c5e39ead91d903e8ebc8e22"
+                "reference": "a515dc6f80bee00ded6364626953b3b8de15c303"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/1382afef595c2ced1c5e39ead91d903e8ebc8e22",
-                "reference": "1382afef595c2ced1c5e39ead91d903e8ebc8e22",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-storage/zipball/a515dc6f80bee00ded6364626953b3b8de15c303",
+                "reference": "a515dc6f80bee00ded6364626953b3b8de15c303",
                 "shasum": ""
             },
             "require": {
@@ -967,9 +967,9 @@
             ],
             "description": "Cloud Storage Client for PHP",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-storage/tree/v1.26.1"
+                "source": "https://github.com/googleapis/google-cloud-php-storage/tree/v1.26.2"
             },
-            "time": "2022-01-31T21:39:13+00:00"
+            "time": "2022-04-20T18:34:50+00:00"
         },
         {
             "name": "google/crc32",
@@ -6182,29 +6182,32 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v6.0.7",
+            "version": "v5.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "a7930c47248b9b57e9d0b8da100ffc1e031536dc"
+                "reference": "88b6909f74fd1f2147e068411f71870a3b27ac56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/a7930c47248b9b57e9d0b8da100ffc1e031536dc",
-                "reference": "a7930c47248b9b57e9d0b8da100ffc1e031536dc",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/88b6909f74fd1f2147e068411f71870a3b27ac56",
+                "reference": "88b6909f74fd1f2147e068411f71870a3b27ac56",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2",
+                "php": ">=7.2.5",
                 "psr/log": "^1|^2|^3",
-                "symfony/http-client-contracts": "^3",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/http-client-contracts": "^2.4",
+                "symfony/polyfill-php73": "^1.11",
+                "symfony/polyfill-php80": "^1.16",
                 "symfony/service-contracts": "^1.0|^2|^3"
             },
             "provide": {
                 "php-http/async-client-implementation": "*",
                 "php-http/client-implementation": "*",
                 "psr/http-client-implementation": "1.0",
-                "symfony/http-client-implementation": "3.0"
+                "symfony/http-client-implementation": "2.4"
             },
             "require-dev": {
                 "amphp/amp": "^2.5",
@@ -6215,10 +6218,10 @@
                 "nyholm/psr7": "^1.0",
                 "php-http/httplug": "^1.0|^2.0",
                 "psr/http-client": "^1.0",
-                "symfony/dependency-injection": "^5.4|^6.0",
-                "symfony/http-kernel": "^5.4|^6.0",
-                "symfony/process": "^5.4|^6.0",
-                "symfony/stopwatch": "^5.4|^6.0"
+                "symfony/dependency-injection": "^4.4|^5.0|^6.0",
+                "symfony/http-kernel": "^4.4.13|^5.1.5|^6.0",
+                "symfony/process": "^4.4|^5.0|^6.0",
+                "symfony/stopwatch": "^4.4|^5.0|^6.0"
             },
             "type": "library",
             "autoload": {
@@ -6246,7 +6249,7 @@
             "description": "Provides powerful methods to fetch HTTP resources synchronously or asynchronously",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-client/tree/v6.0.7"
+                "source": "https://github.com/symfony/http-client/tree/v5.4.7"
             },
             "funding": [
                 {
@@ -6262,24 +6265,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-01T12:27:43+00:00"
+            "time": "2022-04-01T12:27:37+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
-            "version": "v3.0.1",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client-contracts.git",
-                "reference": "f7525778c712be78ad5b6ca31f47fdcfd404c280"
+                "reference": "1a4f708e4e87f335d1b1be6148060739152f0bd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/f7525778c712be78ad5b6ca31f47fdcfd404c280",
-                "reference": "f7525778c712be78ad5b6ca31f47fdcfd404c280",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/1a4f708e4e87f335d1b1be6148060739152f0bd5",
+                "reference": "1a4f708e4e87f335d1b1be6148060739152f0bd5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2"
+                "php": ">=7.2.5"
             },
             "suggest": {
                 "symfony/http-client-implementation": ""
@@ -6287,7 +6290,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.0-dev"
+                    "dev-main": "2.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -6324,7 +6327,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/http-client-contracts/tree/v3.0.1"
+                "source": "https://github.com/symfony/http-client-contracts/tree/v2.5.1"
             },
             "funding": [
                 {
@@ -6340,7 +6343,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-13T20:10:05+00:00"
+            "time": "2022-03-13T20:07:29+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -6612,21 +6615,23 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v6.0.3",
+            "version": "v5.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "51f7006670febe4cbcbae177cbffe93ff833250d"
+                "reference": "cc1147cb11af1b43f503ac18f31aa3bec213aba8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/51f7006670febe4cbcbae177cbffe93ff833250d",
-                "reference": "51f7006670febe4cbcbae177cbffe93ff833250d",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/cc1147cb11af1b43f503ac18f31aa3bec213aba8",
+                "reference": "cc1147cb11af1b43f503ac18f31aa3bec213aba8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2",
-                "symfony/deprecation-contracts": "^2.1|^3"
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/polyfill-php73": "~1.0",
+                "symfony/polyfill-php80": "^1.16"
             },
             "type": "library",
             "autoload": {
@@ -6659,7 +6664,7 @@
                 "options"
             ],
             "support": {
-                "source": "https://github.com/symfony/options-resolver/tree/v6.0.3"
+                "source": "https://github.com/symfony/options-resolver/tree/v5.4.3"
             },
             "funding": [
                 {
@@ -6675,7 +6680,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:55:41+00:00"
+            "time": "2022-01-02T09:53:40+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -8219,27 +8224,28 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v6.0.3",
+            "version": "v5.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "e77f3ea0b21141d771d4a5655faa54f692b34af5"
+                "reference": "e80f87d2c9495966768310fc531b487ce64237a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/e77f3ea0b21141d771d4a5655faa54f692b34af5",
-                "reference": "e77f3ea0b21141d771d4a5655faa54f692b34af5",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/e80f87d2c9495966768310fc531b487ce64237a2",
+                "reference": "e80f87d2c9495966768310fc531b487ce64237a2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2",
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "symfony/console": "<5.4"
+                "symfony/console": "<5.3"
             },
             "require-dev": {
-                "symfony/console": "^5.4|^6.0"
+                "symfony/console": "^5.3|^6.0"
             },
             "suggest": {
                 "symfony/console": "For validating YAML files using the lint command"
@@ -8273,7 +8279,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v6.0.3"
+                "source": "https://github.com/symfony/yaml/tree/v5.4.3"
             },
             "funding": [
                 {
@@ -8289,7 +8295,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-26T17:23:29+00:00"
+            "time": "2022-01-26T16:32:32+00:00"
         },
         {
             "name": "tymon/jwt-auth",
@@ -10825,5 +10831,5 @@
     "platform-overrides": {
         "php": "7.4.21"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
