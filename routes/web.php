@@ -47,3 +47,8 @@ $router->group([
 ], function ($router) {
     $router->get('/', 'FilterObjectController@index');
 });
+
+
+$router->get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});
