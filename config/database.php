@@ -8,7 +8,6 @@ return [
             'database' => env('DB_DATABASE', base_path('database/database.sqlite')),
             'prefix' => env('DB_PREFIX', ''),
         ],
-
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'localhost'),
@@ -24,11 +23,11 @@ return [
         ],
         'mongodb' => [
             'driver' => 'mongodb',
-            'host' => env('DB_HOST', '192.168.56.56'),
-            'port' => env('DB_PORT', 27017),
-            'database' => env('DB_DATABASE', 'homestead'),
-            'username' => env('DB_USERNAME', 'homestead'),
-            'password' => env('DB_PASSWORD', 'secret'),
+            'host' => env('DB_HOST_NOSQL', '192.168.56.56'),
+            'port' => env('DB_PORT_NOSQL', 27017),
+            'database' => env('DB_DATABASE_NOSQL', 'homestead'),
+            'username' => env('DB_USERNAME_NOSQL', 'homestead'),
+            'password' => env('DB_PASSWORD_NOSQL', 'secret'),
             'options' => [
                 'database' => env('DB_AUTHENTICATION_DATABASE', 'admin'), // required with Mongo 3+
             ],
