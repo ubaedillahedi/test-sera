@@ -24,6 +24,7 @@ $app = new Laravel\Lumen\Application(
 );
 
 $app->register(Kreait\Laravel\Firebase\ServiceProvider::class);
+$app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
 
 $app->withFacades();
 

@@ -2,6 +2,8 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use App\Models\Book;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -51,4 +53,14 @@ $router->group([
 
 $router->get('/debug-sentry', function () {
     throw new Exception('My first Sentry error!');
+});
+
+$router->group([
+    'prefix' => 'api/mongodb'
+], function ($router) {
+    $router->get('/', 'MongodbController@index');
+    $router->get('/{id}', 'MongodbController@detail');
+    $router->post('/save', 'MongodbController@store');
+    $router->post('/update/{id}', 'MongodbController@update');
+    $router->post('/delete/{id}', 'MongodbController@delete');
 });
