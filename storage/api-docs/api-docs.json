@@ -167,6 +167,114 @@
                 }
             }
         },
+
+        "/api/mongodb": {
+            "get": {
+                "description": "API List MongoDB",
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/mongodb/{id}": {
+            "get": {
+                "description": "API Detail MongoDB",
+                "parameters": [
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "_id from firebase",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/mongodb/save": {
+            "post": {
+                "description": "API Insert MongoDB",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "body",
+                        "description": "Field name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone",
+                        "in": "body",
+                        "description": "Field phone",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/mongodb/update/{id}": {
+            "post": {
+                "description": "API Update MongoDB",
+                "parameters": [
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Id from firebase",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "in": "body",
+                        "description": "Field name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "phone",
+                        "in": "body",
+                        "description": "Field phone",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
+        "/api/mongodb/delete/{id}": {
+            "post": {
+                "description": "API Delete MongoDB",
+                "parameters": [
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Id from firebase",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "code: <b>integer</b><br>message: <b>string</b><br>data: <b>object</b>"
+                    }
+                }
+            }
+        },
         "/api/integration/login": {
             "post": {
                 "description": "API Integration Login",
